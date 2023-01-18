@@ -1,0 +1,62 @@
+### Finds all users in the system
+GET http://localhost:8080/api/user/all
+Accept: application/json
+
+### Finds a user by his id
+GET http://localhost:8080/api/info/user/2
+Accept: application/json
+
+### Gets the count of users in the system
+GET http://localhost:8080/api/info/count
+Accept: application/json
+
+### Creates a new person
+POST http://localhost:8080/BackEnd_CA2_war_exploded/api/user/add
+Content-Type: application/json
+
+{
+  "userName": "test",
+  "userPass": "test",
+  "roleList": [
+    {"roleName": "admin"}
+  ]
+}
+
+### Updates a person by his id
+PUT http://localhost:8080/BackEnd_CA2_war_exploded/api/user/1
+Content-Type: application/json
+
+{"userName": "UserChanged", "userPass": "test123"}
+
+### Deletes a user by his id
+DELETE http://localhost:8080/api/info/user/34
+Accept: application/json
+
+### Create a favorite with users id
+POST http://localhost:8080/BackEnd_CA2_war_exploded/api/user/favorite
+Content-Type: application/json
+
+{"userid": 2, "slug": "utahpetadoptions"}
+### Updated blacklist test
+POST http://localhost:8080/BackEnd_CA2_war_exploded/api/charity/ban+electionscience
+Content-Type: application/json
+
+{
+  "userName": "test",
+  "userPass": "test",
+  "roleList": [
+    {"roleName":"admin"}
+  ]
+}
+### Get
+GET http://localhost:8080/BackEnd_CA2_war_exploded/api/charity/electionscience
+Content-Type: application/json
+
+### POST
+GET http://localhost:8080/BackEnd_CA2_war_exploded/api/user/favorite
+Content-Type: application/json
+
+{
+"userid":2,
+  "favorite": "electionscience"
+}
